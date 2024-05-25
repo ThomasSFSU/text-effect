@@ -22,6 +22,40 @@ body {
 #text {
     font-size: 10rem;
     color: transparent;
-    background: linear-gradient(var(--dark-charcoal), var(--gun-metal-gray), var(--steel-gray), var(--slate-gray), var(--metallic-silver));
+    background: blue;
     background-clip: text;
+    animation-duration: 1s;
+    animation-name: shine;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
 }
+
+@keyframes shine {
+    from {
+        color: transparent;
+        background: linear-gradient(var(--dark-charcoal), var(--gun-metal-gray), var(--steel-gray), var(--slate-gray), var(--metallic-silver));
+        background-clip: text;
+    }
+
+    75% {
+        color: transparent;
+        background: linear-gradient(var(--gun-metal-gray), var(--steel-gray), var(--slate-gray), var(--metallic-silver), var(--dark-charcoal));
+        background-clip: text;
+    }
+    50% {
+        color: transparent;
+        background: linear-gradient(var(--steel-gray), var(--slate-gray), var(--metallic-silver), var(--dark-charcoal), var(--gun-metal-gray));
+        background-clip: text;
+    }
+    25% {
+        color: transparent;
+        background: linear-gradient(var(--slate-gray), var(--metallic-silver), var(--dark-charcoal), var(--gun-metal-gray), var(--steel-gray));
+        background-clip: text;
+    }
+    to {
+        color: transparent;
+        background: linear-gradient(var(--metallic-silver), var(--dark-charcoal), var(--gun-metal-gray), var(--steel-gray), var(--slate-gray));
+        background-clip: text;
+    }
+  }
